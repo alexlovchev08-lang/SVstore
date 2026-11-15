@@ -1,0 +1,20 @@
+/* ===== responsive.css — адаптация под телефоны и планшеты =====
+   Эти правила подключаются ПОСЛЕ style.css, поэтому могут менять его стили на маленьких экранах. */
+  @media (max-width: 560px) { .promo { font-size: .75rem; gap: 8px; } .promo span { display: none; } }
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .builder, .pd, .split, .specs-wrap { grid-template-columns: 1fr; }
+    .pd-media { position: relative; top: 0; height: 380px; }
+    .hero-visual { opacity: .2; width: 90vw; right: -30%; }
+    .toolbar { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .cats, .form-grid .row2 { grid-template-columns: 1fr; }
+    .builder-box, .panel { padding: 26px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .toasts { left: 16px; right: 16px; bottom: 16px; align-items: stretch; }
+    .toast { min-width: 0; max-width: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  }
